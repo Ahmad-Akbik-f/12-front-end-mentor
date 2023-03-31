@@ -1,5 +1,4 @@
 import data from './data.json' assert { type: 'json' }; 
-console.log(data);
 //varibles
 let dailyBtn = document.querySelector(".report__opt span.opt__daily")
 let weeklyBtn = document.querySelector(".report__opt span.opt__weekly")
