@@ -1,0 +1,194 @@
+body {
+  background-color: hsl(226, 43%, 10%);
+  box-sizing: border-box;
+  font-family: "Rubik";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+main {
+  min-width: 1200px;
+}
+@media (max-width: 575px) {
+  main {
+    min-width: auto;
+  }
+}
+
+.grid {
+  display: grid;
+  height: 520px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: 50% 50%;
+  gap: 30px;
+}
+@media (max-width: 575px) {
+  .grid {
+    margin: 40px 20px;
+    grid-template-rows: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.grid .report {
+  grid-row: 2 span;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+}
+@media (max-width: 575px) {
+  .grid .report {
+    grid-row: auto;
+  }
+}
+.grid .report__cont {
+  border-radius: 15px;
+  background-color: hsl(246, 80%, 60%);
+  padding: 30px 30px 80px 30px;
+}
+.grid .report__cont__img {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  width: 85px;
+  height: 85px;
+  margin-bottom: 40px;
+}
+.grid .report__cont__img img {
+  display: block;
+  max-width: 100%;
+}
+.grid .report__cont p {
+  margin-bottom: 0px;
+  color: hsl(236, 100%, 87%);
+}
+.grid .report__cont h1 {
+  font-size: 40px;
+  margin-top: 0px;
+  font-weight: 300;
+}
+@media (max-width: 575px) {
+  .grid .report__cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .grid .report__cont h1 {
+    font-size: 25px !important;
+  }
+  .grid .report__cont .txt {
+    margin-left: 15px;
+  }
+  .grid .report__cont__img {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0;
+  }
+}
+.grid .report__opt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  font-size: 18px;
+}
+.grid .report__opt span {
+  color: hsl(235, 45%, 61%);
+  cursor: pointer;
+  transition: 0.2s;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.grid .report__opt span.active, .grid .report__opt span:hover {
+  color: #fff;
+}
+@media (max-width: 575px) {
+  .grid .report__opt {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.grid__box {
+  border-radius: 15px;
+}
+.grid__box.work {
+  background-color: hsl(15, 100%, 70%);
+}
+.grid__box.play {
+  background-color: hsl(195, 74%, 62%);
+}
+.grid__box.study {
+  background-color: hsl(348, 100%, 68%);
+}
+.grid__box.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.grid__box.social {
+  background-color: hsl(264, 64%, 52%);
+}
+.grid__box.selfCare {
+  background-color: hsl(43, 84%, 65%);
+}
+.grid__box .img {
+  overflow: hidden;
+  height: 50px;
+  padding: 0 15px;
+  direction: rtl;
+}
+.grid__box .img img {
+  margin-top: -5px;
+}
+.grid__box:hover .content {
+  background-color: hsl(236, 41%, 34%);
+}
+.grid__box .content {
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: hsl(235, 46%, 20%);
+  padding: 30px;
+  position: relative;
+}
+.grid__box .content p {
+  margin: 0;
+  font-size: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.grid__box .content svg {
+  position: absolute;
+  right: 30px;
+  top: 39px;
+  cursor: pointer;
+}
+.grid__box .content svg:hover path {
+  transition: 0.2s;
+  fill: #fff;
+}
+.grid__box .content h2 {
+  font-size: 60px;
+  margin: 20px 0 15px 0;
+  font-weight: 300;
+}
+.grid__box .content span {
+  color: hsl(236, 100%, 87%);
+  margin-bottom: 10px;
+  display: block;
+}
+@media (max-width: 575px) {
+  .grid__box .content .txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .grid__box .content .txt h2 {
+    font-size: 30px;
+    margin: 0;
+  }
+  .grid__box .content .txt span {
+    margin: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

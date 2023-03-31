@@ -1,0 +1,185 @@
+//Vars
+$mainBorder:15px;
+$mainDuraition:0.2s;
+//
+body{
+    background-color: hsl(226, 43%, 10%);
+    box-sizing: border-box;
+    font-family: "Rubik";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+main{
+    min-width: 1200px;
+    @media (max-width:575px) {
+        min-width: auto;
+    }
+}
+.grid{
+    display: grid;
+    height: 520px;
+    @media (max-width:575px) {
+        margin: 40px 20px;
+        grid-template-rows:auto;
+        height: fit-content;
+    }
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-rows: 50% 50%;
+    gap: 30px;
+    & .report{
+        grid-row:2 span;
+        background-color: hsl(235, 46%, 20%);
+        border-radius:$mainBorder;
+        @media (max-width:575px) {
+            grid-row:auto;
+        }
+        &__cont{
+            border-radius:$mainBorder;
+            background-color: hsl(246, 80%, 60%);
+            padding: 30px 30px 80px 30px;
+            &__img{
+                border-radius: 50%;
+                border: 4px solid #fff;
+                width: 85px;
+                height: 85px;
+                margin-bottom: 40px;
+                img{
+                    display: block;
+                    max-width: 100%;
+                }
+            }
+            p{
+                margin-bottom: 0px;
+                color: hsl(236, 100%, 87%);
+            }
+            h1{
+                font-size: 40px;
+                margin-top: 0px;
+                font-weight: 300;
+            }
+            @media (max-width:575px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                h1{
+                    font-size: 25px !important;
+                }
+                .txt{
+                    margin-left: 15px;
+                }
+                &__img{
+                    width: 60px !important;
+                    height: 60px !important;
+                    margin: 0;
+                }
+            }
+        }
+        &__opt{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding:30px;
+            font-size: 18px;
+            span{
+                color: hsl(235, 45%, 61%);
+                cursor: pointer;
+                transition: $mainDuraition;
+                width: fit-content;
+                &.active,&:hover{
+                    color: #fff;
+                }
+            }
+            @media (max-width:575px) {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    }
+    &__box{
+        border-radius: $mainBorder;
+        &.work{
+            background-color: hsl(15, 100%, 70%);
+        }
+        &.play{
+            background-color: hsl(195, 74%, 62%);
+        }
+        &.study{
+            background-color: hsl(348, 100%, 68%);
+        }
+        &.exercise{
+            background-color: hsl(145, 58%, 55%);
+        }
+        &.social{
+            background-color: hsl(264, 64%, 52%);
+        }
+        &.selfCare{
+            background-color: hsl(43, 84%, 65%);
+        }
+        .img{
+            overflow: hidden;
+            height: 50px;
+            padding:0 15px;
+            direction: rtl;
+            img{
+                margin-top: -5px;
+            }
+        }
+        &:hover .content{
+            background-color: hsl(236deg 41% 34%);
+        }
+        .content{
+            transition: $mainDuraition;
+            cursor: pointer;
+            border-radius: $mainBorder;
+            background-color: hsl(235, 46%, 20%);
+            padding: 30px;
+            position: relative;
+            p{
+                margin: 0;
+                font-size: 18px;
+                width: fit-content;
+            }
+            svg{
+                position: absolute;
+                right: 30px;
+                top: 39px;
+                cursor: pointer;
+                &:hover{
+                    path{
+                        transition: $mainDuraition;
+                        fill: #fff;
+                    }
+                }
+            }
+            h2{
+                font-size: 60px;
+                margin:20px 0 15px 0;
+                font-weight: 300;
+            }
+            span{
+                color: hsl(236, 100%, 87%);
+                margin-bottom: 10px;
+                display: block;
+            }
+            @media (max-width:575px) {
+                .txt{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 10px;
+                    h2{
+                        font-size: 30px;
+                        margin: 0;
+                    }
+                    span{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
